@@ -37,7 +37,20 @@ function deepClone(obj: DeepCloneSupportedType): DeepCloneSupportedType {
   const copy: typeof obj = {};
 
   Object.keys(obj).forEach(key => {
-    copy[key] = deepClone(obj[key]);
+    const value = deepClone(obj[key]);
+
+    // The __proto__ property has a special meaning in JavaScript. So, to prevent prototype poisoning,
+    // we restrict direct assignment to this property.
+    if (key === '__proto__') {
+      Object.defineProperty(copy, key, {
+        configurable: true,
+        enumerable: true,
+        value,
+        writable: true,
+      });
+    } else {
+      copy[key] = value;
+    }
   });
 
   return copy;
