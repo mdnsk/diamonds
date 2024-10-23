@@ -1,13 +1,18 @@
 # Changelog
 
+# 8.9.1 (25.10.2024)
+
+Fixed prototype poisoning vulnerability in `deepClone`.
+
+
 ## 8.9.0 (31.05.2023)
 
 Ensured Node.js 18 support.
 
 `deepClone` typings have become more strict due to the goal to remove `any`. 
 Thus, this helper does not expect `any` anymore. 
-Instead it expects `boolean | number | bigint | string | undefined | null | Date`, or array of them, or an object with values of these types. 
-The array and theh object may be nested.
+Instead, it expects `boolean | number | bigint | string | undefined | null | Date`, or array of them, or an object with values of these types. 
+The array and the object may be nested.
 
 We believe that this is not a breaking change, because this change makes types more correct and more close to the implementation.
 It means that if your code does not satisfy the types of `deepClone`, you're probably not using it right.
@@ -177,7 +182,7 @@ Removed `deepFlatten` & `getHostnameFromString`.
 
 Added CommonJS version for scripts to make it possible to use them in Node.js env.
 
-To make it work we had to change [isMobile](./lib/is-mobile.js) notation. For now this helpers exports 
+To make it work we had to change [isMobile](./lib/is-mobile.js) notation. For now these helpers export 
 a function that returns value, not the value itself.
 
 
