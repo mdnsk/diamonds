@@ -1,10 +1,10 @@
-# @funboxteam/diamonds
+# @necrobox/diamonds
 
 <img align="right" width="192" height="192"
      alt="Set of diamonds"
      src="./logo.png">
 
-[![npm](https://img.shields.io/npm/v/@funboxteam/diamonds.svg)](https://www.npmjs.com/package/@funboxteam/diamonds)
+[![npm](https://img.shields.io/npm/v/@necrobox/diamonds.svg)](https://www.npmjs.com/package/@necrobox/diamonds)
 
 This is a set of helpers that we use in the current projects and will probably use in the future ones. 
 
@@ -53,28 +53,18 @@ All helpers are independent of each other, which means that your project's bundl
   - [throttle](#throttle)
 - [Credits](#credits)
 
-## Rationale
-
-When developers create projects they use a lot of small functions that are not connected to the project itself.
-Usually such functions are stored in folders like `utils` or `helpers`. 
-
-To prevent copy-pasting between a huge amount of projects we've created this package.
-
-These functions are not aimed to be absolutely safe to unexpected usage. 
-They do exactly what they say they do, and nothing else.  
-
 ## Installation
 
 Add the package to deps:
 
 ```sh
-npm install --save @funboxteam/diamonds 
+npm install --save @necrobox/diamonds 
 ```
 
 Import functions:
 
 ```js
-import { getUniqueId } from '@funboxteam/diamonds';
+import { getUniqueId } from '@necrobox/diamonds';
 ```
 
 ## List of helpers
@@ -283,8 +273,16 @@ Transforms the passed callback into the function that delays callback firing.
 
 It's useful when you want to react on some events but no than once an N ms. 
 
+## Rationale
+
+When developers create projects they use a lot of small functions that are not connected to the project itself.
+Usually such functions are stored in folders like `utils` or `helpers`.
+
+To prevent copy-pasting between a huge amount of projects we've created this package.
+
+These functions are not aimed to be absolutely safe to unexpected usage.
+They do exactly what they say they do, and nothing else.
+
 ## Credits
 
 Cute picture for the project was made by [Igor Garybaldi](http://pandabanda.com/).
-
-[![Sponsored by FunBox](https://funbox.ru/badges/sponsored_by_funbox_centered.svg)](https://funbox.ru)
