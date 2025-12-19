@@ -1,5 +1,5 @@
 {
-  "name": "@funboxteam/diamonds",
+  "name": "@necrobox/diamonds",
   "version": "8.9.0",
   "description": "A shiny pile of typed JS helpers for everyday use",
   "scripts": {
@@ -23,7 +23,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/funbox/diamonds"
+    "url": "https://github.com/necrobox/diamonds"
   },
   "files": [
     "dist/",
