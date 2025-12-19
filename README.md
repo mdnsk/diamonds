@@ -53,16 +53,6 @@ All helpers are independent of each other, which means that your project's bundl
   - [throttle](#throttle)
 - [Credits](#credits)
 
-## Rationale
-
-When developers create projects they use a lot of small functions that are not connected to the project itself.
-Usually such functions are stored in folders like `utils` or `helpers`. 
-
-To prevent copy-pasting between a huge amount of projects we've created this package.
-
-These functions are not aimed to be absolutely safe to unexpected usage. 
-They do exactly what they say they do, and nothing else.  
-
 ## Installation
 
 Add the package to deps:
@@ -282,6 +272,16 @@ Makes it possible to use `localStorage` safely.
 Transforms the passed callback into the function that delays callback firing.
 
 It's useful when you want to react on some events but no than once an N ms. 
+
+## Rationale
+
+When developers create projects they use a lot of small functions that are not connected to the project itself.
+Usually such functions are stored in folders like `utils` or `helpers`.
+
+To prevent copy-pasting between a huge amount of projects we've created this package.
+
+These functions are not aimed to be absolutely safe to unexpected usage.
+They do exactly what they say they do, and nothing else.
 
 ## Credits
 
