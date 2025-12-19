@@ -298,5 +298,3 @@ getImageOrientation.call(this, image, orientation => {
 ## Благодарности
 
 Клёвую картинку для репозитория нарисовал [Игорь Гарибальди](http://pandabanda.com/).
-
-[![Sponsored by FunBox](https://funbox.ru/badges/sponsored_by_funbox_centered.svg)](https://funbox.ru)

@@ -286,5 +286,3 @@ They do exactly what they say they do, and nothing else.
 ## Credits
 
 Cute picture for the project was made by [Igor Garybaldi](http://pandabanda.com/).
-
-[![Sponsored by FunBox](https://funbox.ru/badges/sponsored_by_funbox_centered.svg)](https://funbox.ru)
