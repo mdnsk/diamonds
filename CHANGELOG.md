@@ -1,5 +1,12 @@
 # Changelog
 
+## 9.0.1 (20.12.2025)
+
+Updated TypeScript to 5.9.3.
+
+Ensured Node.js 20, 22 & 24 support.
+
+
 ## 9.0.0 (19.12.2025)
 
 Moved package from @funboxteam to @necrobox scope.
