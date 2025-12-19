@@ -7,12 +7,11 @@
     "build-cjs": "tsc --outDir ./dist/cjs --module CommonJS",
     "build-esm-and-types": "tsc --outDir ./dist/esm --module ES6 --declaration true --declarationDir ./dist/types",
     "clean": "rm -rf dist/",
-    "coverage": "mkdir -p ./coverage/ && nyc report --reporter=text-lcov > ./coverage/lcov.info",
     "lint": "eslint --cache -c .eslintrc.js --ext .ts lib tests",
     "prebuild": "npm run lint && rm -rf dist",
     "prepack": "npm run build",
     "start": "nodemon -e ts,js,json --exec 'npm test'",
-    "test": "npm run lint && nyc mocha -- --require ts-node/register tests/*.ts"
+    "test": "npm run lint && mocha --require ts-node/register tests/*.ts"
   },
   "sideEffects": false,
   "main": "dist/cjs/index.js",
@@ -41,7 +40,6 @@
     "lint-staged": "13.3.0",
     "mocha": "10.8.2",
     "nodemon": "3.1.11",
-    "nyc": "15.1.0",
     "ts-node": "10.9.2",
     "typescript": "5.9.3"
   },
