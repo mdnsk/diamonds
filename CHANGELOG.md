@@ -1,5 +1,10 @@
 # Changelog
 
+## 9.0.0 (19.12.2025)
+
+Moved package from @funboxteam to @necrobox scope.
+
+
 ## 8.9.0 (31.05.2023)
 
 Ensured Node.js 18 support.

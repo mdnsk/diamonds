@@ -1,5 +1,10 @@
 # Migrations
 
+## 8.9.0 → 9.0.0
+
+Use `@necrobox/diamonds` instead of `@funboxteam/diamonds`.
+
+
 ## 7.0.0 → 8.0.0
 
 Make sure that using non-breaking space in result of [formatPhoneNumberString](./lib/format-phone-number-string.ts)
