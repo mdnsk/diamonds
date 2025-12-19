@@ -1,6 +1,6 @@
 {
   "name": "@necrobox/diamonds",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "description": "A shiny pile of typed JS helpers for everyday use",
   "scripts": {
     "build": "npm run clean && npm run build-esm-and-types && npm run build-cjs",
