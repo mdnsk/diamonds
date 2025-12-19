@@ -1,10 +1,10 @@
-# @funboxteam/diamonds
+# @necrobox/diamonds
 
 <img align="right" width="192" height="192"
      alt="Set of diamonds"
      src="./logo.png">
 
-[![npm](https://img.shields.io/npm/v/@funboxteam/diamonds.svg)](https://www.npmjs.com/package/@funboxteam/diamonds)
+[![npm](https://img.shields.io/npm/v/@necrobox/diamonds.svg)](https://www.npmjs.com/package/@necrobox/diamonds)
 
 This is a set of helpers that we use in the current projects and will probably use in the future ones. 
 
@@ -68,13 +68,13 @@ They do exactly what they say they do, and nothing else.
 Add the package to deps:
 
 ```sh
-npm install --save @funboxteam/diamonds 
+npm install --save @necrobox/diamonds 
 ```
 
 Import functions:
 
 ```js
-import { getUniqueId } from '@funboxteam/diamonds';
+import { getUniqueId } from '@necrobox/diamonds';
 ```
 
 ## List of helpers
