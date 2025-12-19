@@ -14,7 +14,6 @@ All helpers are independent of each other, which means that your project's bundl
 
 ## Contents
 
-- [Rationale](#rationale)
 - [Installation](#installation)
 - [List of helpers](#list-of-helpers)
   - [base64ToUint8Array](#base64touint8array)
@@ -51,6 +50,7 @@ All helpers are independent of each other, which means that your project's bundl
   - [sleep](#sleep)
   - [storage](#storage)
   - [throttle](#throttle)
+- [Rationale](#rationale)
 - [Credits](#credits)
 
 ## Installation
