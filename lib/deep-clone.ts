@@ -11,7 +11,13 @@ interface IDeepCloneSupportedTypeObject {
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IDeepCloneSupportedTypeArray extends Array<DeepCloneSupportedType> { }
 
-/** @deprecated since v8.9.0 - use structuredClone instead
+/**
+ * WARNING!
+ *
+ * There is a problem with __proto__ support in TypeScript. Since our tests are written in TypeScript,
+ * we don't test this helper. Please be careful when changing this function!
+ *
+ * @deprecated since v8.9.0 - use structuredClone instead
  * @see https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
  */
 function deepClone<T extends DeepCloneSupportedType>(obj: T): T;
@@ -37,7 +43,20 @@ function deepClone(obj: DeepCloneSupportedType): DeepCloneSupportedType {
   const copy: typeof obj = {};
 
   Object.keys(obj).forEach(key => {
-    copy[key] = deepClone(obj[key]);
+    const value = deepClone(obj[key]);
+
+    // The __proto__ property has a special meaning in JavaScript. So, to prevent prototype poisoning,
+    // we restrict direct assignment to this property.
+    if (key === '__proto__') {
+      Object.defineProperty(copy, key, {
+        configurable: true,
+        enumerable: true,
+        value,
+        writable: true,
+      });
+    } else {
+      copy[key] = value;
+    }
   });
 
   return copy;
