@@ -11,7 +11,13 @@ interface IDeepCloneSupportedTypeObject {
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IDeepCloneSupportedTypeArray extends Array<DeepCloneSupportedType> { }
 
-/** @deprecated since v8.9.0 - use structuredClone instead
+/**
+ * WARNING!
+ *
+ * There is a problem with __proto__ support in TypeScript. Since our tests are written in TypeScript,
+ * we don't test this helper. Please be careful when changing this function!
+ *
+ * @deprecated since v8.9.0 - use structuredClone instead
  * @see https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
  */
 function deepClone<T extends DeepCloneSupportedType>(obj: T): T;
